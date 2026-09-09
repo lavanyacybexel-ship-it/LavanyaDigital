@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Lavanya Mariyappan — Digital Marketing Executive</title>
+<meta name="description" content="Lavanya Mariyappan, Digital Marketing Executive at Cybexel Technologies — Meta Ads, SEO, content and social media for 100+ client accounts." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#F3EFE3;
+  --paper-alt:#EAE3D0;
+  --ink:#1C2B29;
+  --ink-soft:#54615D;
+  --teal:#1F5C58;
+  --teal-deep:#123936;
+  --mustard:#C98B2E;
+  --line:#CFC6AE;
+  --white:#FCFAF4;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{background:var(--paper);color:var(--ink);font-family:"Work Sans",sans-serif;font-size:16px;line-height:1.6;}
+a{color:inherit;text-decoration:none;}
+img{max-width:100%;display:block;}
+.wrap{width:min(1080px,calc(100% - 48px));margin:0 auto;}
+h1,h2,h3,h4{font-family:"Fraunces",serif;font-weight:600;letter-spacing:-0.01em;line-height:1.12;color:var(--ink);}
+h1{font-size:clamp(2.4rem,6vw,4.4rem);font-weight:500;}
+h2{font-size:clamp(1.7rem,3.4vw,2.5rem);}
+h3{font-size:1.2rem;}
+p{color:var(--ink-soft);}
+.running-head{font-size:0.8rem;color:var(--teal);letter-spacing:0.02em;margin-bottom:14px;font-weight:600;}
+.running-head::before{content:"— ";color:var(--mustard);}
+section{padding:88px 0;border-bottom:1px solid var(--line);}
+section:last-of-type{border-bottom:none;}
+
+/* nav */
+header{position:sticky;top:0;z-index:20;background:rgba(243,239,227,0.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;padding:16px 0;}
+.mark{font-family:"Fraunces",serif;font-weight:600;font-size:1.3rem;color:var(--teal-deep);border:1.5px solid var(--teal-deep);width:40px;height:40px;display:flex;align-items:center;justify-content:center;border-radius:50%;}
+.nav-links{display:flex;gap:26px;font-size:0.92rem;color:var(--ink);}
+.nav-links a{border-bottom:1px solid transparent;padding-bottom:2px;}
+.nav-links a:hover{border-color:var(--mustard);}
+.nav-cta{border:1px solid var(--ink);border-radius:3px;padding:9px 16px;font-size:0.86rem;font-weight:600;}
+.nav-cta:hover{background:var(--ink);color:var(--paper);}
+.menu-btn{display:none;background:none;border:none;font-size:1.5rem;cursor:pointer;color:var(--ink);}
+
+/* hero */
+.hero{padding-top:70px;padding-bottom:0;border-bottom:none;}
+.hero-tag{font-size:0.86rem;color:var(--ink-soft);margin-bottom:18px;}
+.hero-tag b{color:var(--ink);font-weight:600;}
+.hero p.lede{max-width:560px;font-size:1.12rem;margin-top:22px;}
+.hero-actions{display:flex;gap:14px;margin-top:34px;flex-wrap:wrap;}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:13px 22px;border-radius:3px;font-weight:600;font-size:0.94rem;cursor:pointer;border:1px solid var(--ink);}
+.btn-solid{background:var(--teal-deep);color:var(--white);border-color:var(--teal-deep);}
+.btn-solid:hover{background:var(--ink);}
+.btn-ghost{background:transparent;color:var(--ink);}
+.btn-ghost:hover{border-color:var(--mustard);color:var(--mustard);}
+
+/* ledger stat strip */
+.ledger{margin-top:56px;background:var(--teal-deep);color:var(--white);}
+.ledger .wrap{display:grid;grid-template-columns:repeat(4,1fr);}
+.ledger-cell{padding:26px 24px;border-left:1px solid rgba(255,255,255,0.18);}
+.ledger-cell:first-child{border-left:none;}
+.ledger-cell .num{font-family:"Fraunces",serif;font-size:2rem;color:var(--mustard);}
+.ledger-cell .label{font-size:0.82rem;color:#C9D6D3;margin-top:4px;}
+
+/* about */
+.about-grid{display:grid;grid-template-columns:0.8fr 1.2fr;gap:64px;}
+.about-grid p{margin-top:16px;max-width:600px;}
+
+/* skills */
+.skill-rows{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid var(--line);margin-top:36px;}
+.skill-row{padding:13px 0;border-bottom:1px solid var(--line);font-size:0.98rem;}
+.skill-row:nth-child(odd){padding-right:20px;}
+.skill-row::before{content:"·";color:var(--mustard);font-weight:700;margin-right:10px;}
+
+/* results ledger table */
+.results-table{margin-top:36px;border-top:1px solid var(--line);}
+.result-row{display:grid;grid-template-columns:110px 1fr;gap:24px;padding:18px 0;border-bottom:1px solid var(--line);align-items:baseline;}
+.result-row .fig{font-family:"Fraunces",serif;font-size:1.6rem;color:var(--teal-deep);}
+.result-row .desc{font-size:0.95rem;}
+.result-note{margin-top:20px;font-size:0.85rem;color:var(--ink-soft);}
+
+/* social strip */
+.social-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);margin-top:36px;border:1px solid var(--line);}
+.social-cell{background:var(--paper);padding:26px;}
+.social-cell .num{font-family:"Fraunces",serif;font-size:1.7rem;color:var(--teal-deep);}
+.social-cell .name{font-weight:600;margin-top:6px;}
+.social-cell .type{font-size:0.85rem;color:var(--ink-soft);margin-top:2px;}
+
+/* services list */
+.dark{background:var(--teal-deep);color:var(--white);}
+.dark p{color:#C9D6D3;}
+.dark .running-head{color:var(--mustard);}
+.dark h2{color:var(--white);}
+.services-list{margin-top:40px;border-top:1px solid rgba(255,255,255,0.18);}
+.service-item{display:grid;grid-template-columns:220px 1fr;gap:30px;padding:22px 0;border-bottom:1px solid rgba(255,255,255,0.18);}
+.service-item h3{color:var(--white);font-size:1.05rem;}
+.service-item p{color:#C9D6D3;font-size:0.95rem;}
+
+/* work */
+.filters{display:flex;gap:10px;flex-wrap:wrap;margin:36px 0 30px;}
+.filter-btn{border:1px solid var(--line);background:transparent;padding:8px 14px;border-radius:3px;font-size:0.85rem;cursor:pointer;color:var(--ink-soft);}
+.filter-btn.active{background:var(--teal-deep);border-color:var(--teal-deep);color:var(--white);}
+.work-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);border:1px solid var(--line);}
+.proj{background:var(--white);padding:28px;}
+.proj .tag-line{font-size:0.8rem;color:var(--teal);font-weight:600;margin-bottom:8px;}
+.proj h3{margin-bottom:12px;}
+.proj dl{margin-top:14px;font-size:0.9rem;}
+.proj dt{color:var(--mustard);font-weight:600;margin-top:10px;}
+.proj dd{color:var(--ink-soft);margin-left:0;}
+
+/* case studies */
+.case-tabs{display:flex;gap:10px;margin-top:36px;flex-wrap:wrap;}
+.case-tab{border:1px solid var(--line);padding:9px 16px;border-radius:3px;font-size:0.88rem;cursor:pointer;background:transparent;color:var(--ink-soft);}
+.case-tab.active{background:var(--ink);border-color:var(--ink);color:var(--paper);}
+.case-panel{display:none;margin-top:30px;border-top:1px solid var(--line);}
+.case-panel.active{display:block;}
+.case-row{display:grid;grid-template-columns:170px 1fr;gap:24px;padding:18px 0;border-bottom:1px solid var(--line);}
+.case-row .k{font-size:0.85rem;color:var(--teal);font-weight:600;}
+.case-row .v{font-size:0.96rem;}
+.case-row .v.todo{color:var(--ink-soft);font-style:italic;}
+
+/* process */
+.process-list{margin-top:40px;}
+.process-item{display:grid;grid-template-columns:70px 1fr;gap:24px;padding:20px 0;border-bottom:1px solid rgba(255,255,255,0.18);}
+.process-item .n{font-family:"Fraunces",serif;font-size:1.5rem;color:var(--mustard);}
+.process-item h3{color:var(--white);}
+.process-item p{color:#C9D6D3;}
+
+/* tags simple */
+.tag-cloud{display:flex;flex-wrap:wrap;gap:10px;margin-top:32px;}
+.tag-cloud span{border:1px solid var(--line);padding:8px 14px;border-radius:3px;font-size:0.86rem;}
+
+/* education */
+.edu-row{display:grid;grid-template-columns:120px 1fr;gap:24px;padding:16px 0;border-bottom:1px solid var(--line);}
+.edu-row .yr{font-size:0.85rem;color:var(--teal);font-weight:600;}
+.edu-row h3{font-size:1rem;}
+.edu-row p{font-size:0.9rem;margin-top:2px;}
+
+/* contact */
+.contact{background:var(--mustard);border-bottom:none;}
+.contact h2{color:var(--ink);}
+.contact p{color:#4A3413;}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;margin-top:40px;}
+.contact-list{display:flex;flex-direction:column;gap:16px;}
+.contact-list a{font-weight:600;font-size:1.05rem;border-bottom:1px solid rgba(28,43,41,0.3);padding-bottom:6px;}
+.contact-list a:hover{border-color:var(--ink);}
+.contact-list .lbl{font-size:0.78rem;text-transform:none;color:#6B4D1B;display:block;margin-bottom:3px;}
+
+footer{padding:28px 0;font-size:0.85rem;color:var(--ink-soft);}
+.footer-inner{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;}
+
+@media(max-width:760px){
+  .nav-links{position:fixed;top:73px;left:0;right:0;background:var(--paper);flex-direction:column;padding:20px 24px;gap:16px;display:none;border-bottom:1px solid var(--line);}
+  .nav-links.show{display:flex;}
+  .menu-btn{display:block;}
+  .ledger .wrap{grid-template-columns:1fr 1fr;}
+  .ledger-cell:nth-child(3){border-left:none;}
+  .about-grid,.contact-grid{grid-template-columns:1fr;gap:30px;}
+  .skill-rows,.work-grid{grid-template-columns:1fr;}
+  .social-grid{grid-template-columns:1fr;}
+  .service-item,.case-row,.process-item,.edu-row{grid-template-columns:1fr;gap:6px;}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav-inner">
+    <a href="#top" class="mark">LM</a>
+    <button class="menu-btn" id="menuBtn">☰</button>
+    <nav class="nav-links" id="navLinks">
+      <a href="#about">About</a>
+      <a href="#results">Results</a>
+      <a href="#work">Work</a>
+      <a href="#process">Process</a>
+      <a href="#contact">Contact</a>
+      <a href="resume.pdf" class="nav-cta" target="_blank">Resume ↓</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap">
+      <div class="hero-tag"><b>Lavanya Mariyappan</b> — Digital Marketing Executive, Cybexel Technologies Private Limited, Coimbatore</div>
+      <h1>Campaigns that read like a ledger — every rupee accounted for.</h1>
+      <p class="lede">I plan and run Meta Ads, SEO, content and social media for client brands across real estate, education, hospitality and grooming — with the numbers to show what each campaign actually did.</p>
+      <div class="hero-actions">
+        <a href="#work" class="btn btn-solid">See the work</a>
+        <a href="#results" class="btn btn-ghost">See the results</a>
+        <a href="#contact" class="btn btn-ghost">Get in touch</a>
+      </div>
+    </div>
+    <div class="ledger">
+      <div class="wrap">
+        <div class="ledger-cell"><div class="num">8</div><div class="label">months at Cybexel Technologies</div></div>
+        <div class="ledger-cell"><div class="num">100+</div><div class="label">client works handled</div></div>
+        <div class="ledger-cell"><div class="num">200+</div><div class="label">projects delivered</div></div>
+        <div class="ledger-cell"><div class="num">2</div><div class="label">languages — Tamil & English</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="wrap about-grid">
+      <div>
+        <div class="running-head">About</div>
+        <h2>Hands-on, not just theory.</h2>
+      </div>
+      <div>
+        <p>I'm a Digital Marketing Executive at Cybexel Technologies Private Limited, working directly with clients across real estate, education, hospitality, grooming, healthcare, insurance and local-service businesses.</p>
+        <p>Day to day, that means content marketing, social media management, SEO, influencer marketing, Meta Ads, Google Ads, client communication, proposal and quotation preparation, and team coordination — strategy through execution through reporting.</p>
+        <p>I hold a Master's in Mathematics with Computer Applications, which shows up in how I read a campaign: audience segments, cost curves and conversion rates before creative opinions.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills">
+    <div class="wrap">
+      <div class="running-head">Skills</div>
+      <h2>A full digital marketing toolkit.</h2>
+      <div class="skill-rows">
+        <div class="skill-row">Content Marketing</div>
+        <div class="skill-row">Social Media Marketing (SMM)</div>
+        <div class="skill-row">Search Engine Optimization (SEO)</div>
+        <div class="skill-row">Meta Ads — Facebook & Instagram</div>
+        <div class="skill-row">Google Ads</div>
+        <div class="skill-row">Influencer Marketing</div>
+        <div class="skill-row">Lead Generation</div>
+        <div class="skill-row">Client Follow-ups & Communication</div>
+        <div class="skill-row">Campaign Planning</div>
+        <div class="skill-row">Content Strategy</div>
+        <div class="skill-row">Proposal & Quotation Preparation</div>
+        <div class="skill-row">Team Coordination</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RESULTS -->
+  <section id="results">
+    <div class="wrap">
+      <div class="running-head">Meta Ads — results snapshot</div>
+      <h2>Real numbers, straight from Ads Manager.</h2>
+      <div class="results-table">
+        <div class="result-row"><div class="fig">₹0.86</div><div class="desc">Cost per landing page view — The Fort Kitchen offer campaign</div></div>
+        <div class="result-row"><div class="fig">₹0.92</div><div class="desc">Cost per link click — Buysel real estate campaign</div></div>
+        <div class="result-row"><div class="fig">376</div><div class="desc">Messaging conversations from one campaign at ₹28.17 each, 97.5K reach</div></div>
+        <div class="result-row"><div class="fig">₹2.73</div><div class="desc">Cost per lead — hiring campaign, 145 leads</div></div>
+        <div class="result-row"><div class="fig">292K+</div><div class="desc">People reached — Fort Kitchen brand-awareness campaign</div></div>
+        <div class="result-row"><div class="fig">201</div><div class="desc">Calls placed from a cluster lead-gen campaign, 111K+ reach</div></div>
+        <div class="result-row"><div class="fig">239</div><div class="desc">Link clicks at ₹0.92 each — Murugan real estate campaign</div></div>
+        <div class="result-row"><div class="fig">94</div><div class="desc">Leads at ₹3.53 per lead — hiring group campaign</div></div>
+      </div>
+      <p class="result-note">Figures pulled directly from Meta Ads Manager reporting for client accounts I manage.</p>
+    </div>
+  </section>
+
+  <!-- SOCIAL -->
+  <section>
+    <div class="wrap">
+      <div class="running-head">Social media management</div>
+      <h2>Accounts I plan, create and grow.</h2>
+      <div class="social-grid">
+        <div class="social-cell"><div class="num">1,015</div><div class="name">The Fort Kitchen, Palakkad</div><div class="type">Hotel & Restaurant</div></div>
+        <div class="social-cell"><div class="num">3,117</div><div class="name">Agape Travels Kashmir</div><div class="type">Travel & Tourism</div></div>
+        <div class="social-cell"><div class="num">849</div><div class="name">McKingstown Men's Grooming</div><div class="type">161-outlet salon chain</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="dark" id="services">
+    <div class="wrap">
+      <div class="running-head">What I do</div>
+      <h2>Nine ways I move a brand forward.</h2>
+      <div class="services-list">
+        <div class="service-item"><h3>Content Marketing</h3><p>Captions, promotional content, campaign content and content strategy for different brands.</p></div>
+        <div class="service-item"><h3>Social Media Management</h3><p>Planning, creating, scheduling and managing content across Instagram and Facebook.</p></div>
+        <div class="service-item"><h3>SEO</h3><p>Website analysis, keyword research, on-page SEO, audits and visibility improvement.</p></div>
+        <div class="service-item"><h3>Meta Ads</h3><p>Campaign setup, audience targeting, budget planning, lead generation and performance monitoring.</p></div>
+        <div class="service-item"><h3>Google Ads</h3><p>Search campaign planning, keyword targeting, audience research and performance monitoring.</p></div>
+        <div class="service-item"><h3>Influencer Marketing</h3><p>Identifying influencers, coordinating collaborations and supporting brand promotion.</p></div>
+        <div class="service-item"><h3>Client Management</h3><p>Communication, follow-ups, requirements gathering and regular campaign updates.</p></div>
+        <div class="service-item"><h3>Proposals & Quotations</h3><p>Digital marketing proposals, service quotations, campaign plans and pricing structures.</p></div>
+        <div class="service-item"><h3>Team Coordination</h3><p>Assigning work, monitoring progress, reviewing deliverables and meeting deadlines.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WORK -->
+  <section id="work">
+    <div class="wrap">
+      <div class="running-head">Selected work</div>
+      <h2>Real clients, real campaigns.</h2>
+      <div class="filters">
+        <button class="filter-btn active" data-f="all">All</button>
+        <button class="filter-btn" data-f="meta">Meta Ads</button>
+        <button class="filter-btn" data-f="content">Content & Social</button>
+        <button class="filter-btn" data-f="seo">SEO & Strategy</button>
+      </div>
+      <div class="work-grid">
+
+        <div class="proj" data-c="meta">
+          <div class="tag-line">Meta Ads · Lead Gen</div>
+          <h3>We The Leaders Foundation</h3>
+          <p>Education · TNPSC Exam Prep</p>
+          <dl><dt>Role</dt><dd>Meta Ads strategy & execution</dd>
+              <dt>Services</dt><dd>Targeting audit, ad copy (Tamil/English), campaign setup</dd>
+              <dt>Results</dt><dd class="todo">[add campaign results]</dd></dl>
+        </div>
+
+        <div class="proj" data-c="meta content">
+          <div class="tag-line">Meta Ads · Content</div>
+          <h3>Rathina Builders</h3>
+          <p>Real Estate · Theni</p>
+          <dl><dt>Role</dt><dd>Ad copy & creative audit</dd>
+              <dt>Services</dt><dd>Tamil/English ad copy, poster redesign audit</dd>
+              <dt>Results</dt><dd class="todo">[add campaign results]</dd></dl>
+        </div>
+
+        <div class="proj" data-c="meta content">
+          <div class="tag-line">Meta Ads · Social</div>
+          <h3>McKingstown</h3>
+          <p>Grooming · 161 outlets, Coimbatore</p>
+          <dl><dt>Role</dt><dd>Campaign & content lead, outlet-level ads</dd>
+              <dt>Services</dt><dd>Tanglish Reels scripts, WhatsApp-lead Meta Ads per outlet</dd>
+              <dt>Results</dt><dd class="todo">[add campaign results]</dd></dl>
+        </div>
+
+        <div class="proj" data-c="content">
+          <div class="tag-line">Social · Content</div>
+          <h3>Fort Kitchen</h3>
+          <p>Hospitality & F&B · Palakkad</p>
+          <dl><dt>Role</dt><dd>Social content & promotion strategy</dd>
+              <dt>Services</dt><dd>Full ad copy across room/food/bar/events, ₹99 Biriyani promo</dd>
+              <dt>Results</dt><dd class="todo">[add campaign results]</dd></dl>
+        </div>
+
+        <div class="proj" data-c="seo content">
+          <div class="tag-line">SEO · Social</div>
+          <h3>N-ME App</h3>
+          <p>Mobile App</p>
+          <dl><dt>Role</dt><dd>SEO audit & Instagram performance reporting</dd>
+              <dt>Services</dt><dd>App SEO audit, Instagram Insights reporting & growth roadmap</dd>
+              <dt>Results</dt><dd class="todo">[add campaign results]</dd></dl>
+        </div>
+
+        <div class="proj" data-c="seo">
+          <div class="tag-line">Lead Gen · Strategy</div>
+          <h3>Prasanna Engineering Works</h3>
+          <p>Industrial / B2B · Kottayam</p>
+          <dl><dt>Role</dt><dd>Lead generation strategist</dd>
+              <dt>Services</dt><dd>End-to-end lead generation strategy, B2B targeting</dd>
+              <dt>Results</dt><dd class="todo">[add campaign results]</dd></dl>
+        </div>
+
+        <div class="proj" data-c="seo">
+          <div class="tag-line">SEO · Strategy</div>
+          <h3>Cybexel Technologies</h3>
+          <p>UI/UX & Software Agency</p>
+          <dl><dt>Role</dt><dd>SEO audit & social growth</dd>
+              <dt>Services</dt><dd>SEO audit, Instagram content & growth</dd>
+              <dt>Results</dt><dd class="todo">[add campaign results]</dd></dl>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CASE STUDIES -->
+  <section>
+    <div class="wrap">
+      <div class="running-head">Case studies</div>
+      <h2>A closer look, step by step.</h2>
+      <div class="case-tabs">
+        <button class="case-tab active" data-t="wtl">We The Leaders Foundation</button>
+        <button class="case-tab" data-t="mck">McKingstown</button>
+        <button class="case-tab" data-t="fk">Fort Kitchen</button>
+      </div>
+
+      <div class="case-panel active" id="wtl">
+        <div class="case-row"><div class="k">Challenge</div><div class="v todo">[add the specific challenge the client came with]</div></div>
+        <div class="case-row"><div class="k">Strategy</div><div class="v">Built a Meta Ads lead-gen approach for TNPSC exam-prep audiences with a detailed targeting review.</div></div>
+        <div class="case-row"><div class="k">Execution</div><div class="v">Wrote and tested ad copy in Tamil and English, refined the audience targeting configuration.</div></div>
+        <div class="case-row"><div class="k">Management</div><div class="v todo">[add how the campaign was monitored day-to-day]</div></div>
+        <div class="case-row"><div class="k">Performance</div><div class="v todo">[add real results/screenshots]</div></div>
+        <div class="case-row"><div class="k">Key learning</div><div class="v todo">[add key takeaway]</div></div>
+      </div>
+
+      <div class="case-panel" id="mck">
+        <div class="case-row"><div class="k">Challenge</div><div class="v todo">[add the specific challenge the client came with]</div></div>
+        <div class="case-row"><div class="k">Strategy</div><div class="v">Hyperlocal Meta Ads strategy across 161 salon outlets, starting with Ganapathy and Rathinapuram.</div></div>
+        <div class="case-row"><div class="k">Execution</div><div class="v">Produced Tanglish video scripts for Reels and WhatsApp-lead ad copy per outlet.</div></div>
+        <div class="case-row"><div class="k">Management</div><div class="v todo">[add how the campaign was monitored day-to-day]</div></div>
+        <div class="case-row"><div class="k">Performance</div><div class="v todo">[add real results/screenshots]</div></div>
+        <div class="case-row"><div class="k">Key learning</div><div class="v todo">[add key takeaway]</div></div>
+      </div>
+
+      <div class="case-panel" id="fk">
+        <div class="case-row"><div class="k">Challenge</div><div class="v todo">[add the specific challenge the client came with]</div></div>
+        <div class="case-row"><div class="k">Strategy</div><div class="v">Reel-first content strategy built around a ₹99 Biriyani promotion and a CTR diagnosis.</div></div>
+        <div class="case-row"><div class="k">Execution</div><div class="v">Wrote full ad copy across room, food, bar and events categories.</div></div>
+        <div class="case-row"><div class="k">Management</div><div class="v todo">[add how the campaign was monitored day-to-day]</div></div>
+        <div class="case-row"><div class="k">Performance</div><div class="v todo">[add real results/screenshots]</div></div>
+        <div class="case-row"><div class="k">Key learning</div><div class="v todo">[add key takeaway]</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESS -->
+  <section class="dark" id="process">
+    <div class="wrap">
+      <div class="running-head">My work process</div>
+      <h2>Five steps, every campaign.</h2>
+      <div class="process-list">
+        <div class="process-item"><div class="n">01</div><div><h3>Understand</h3><p>The brand, business, audience and goals.</p></div></div>
+        <div class="process-item"><div class="n">02</div><div><h3>Research</h3><p>Competitors, audience, keywords, trends and market opportunities.</p></div></div>
+        <div class="process-item"><div class="n">03</div><div><h3>Plan</h3><p>The marketing strategy, content plan, advertising plan and campaign structure.</p></div></div>
+        <div class="process-item"><div class="n">04</div><div><h3>Execute</h3><p>Content, social media, SEO, Meta Ads, Google Ads and influencer campaigns.</p></div></div>
+        <div class="process-item"><div class="n">05</div><div><h3>Analyze & improve</h3><p>Monitor performance, identify opportunities and optimize the strategy.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TOOLS -->
+  <section>
+    <div class="wrap">
+      <div class="running-head">Tools & platforms</div>
+      <h2>What I work in, daily.</h2>
+      <div class="tag-cloud">
+        <span>Meta Ads Manager</span><span>Google Ads</span><span>Google Analytics</span>
+        <span>Google Search Console</span><span>Google Business Profile</span><span>Canva</span>
+        <span>Figma</span><span>Instagram</span><span>Facebook</span>
+        <span>Google Sheets</span><span>Google Docs</span><span>Microsoft Excel</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE & EDUCATION -->
+  <section>
+    <div class="wrap">
+      <div class="running-head">Experience & education</div>
+      <h2>Milestones along the way.</h2>
+      <div style="margin-top:36px">
+        <div class="edu-row"><div class="yr">01/2026 – Present</div><div><h3>Digital Marketing Executive — Cybexel Technologies Private Limited</h3><p>Meta Ads, Google Ads, content strategy, SEO and social media across 100+ client works and 200+ projects.</p></div></div>
+        <div class="edu-row"><div class="yr">Certificate</div><div><h3>Digital Marketing — Accenture</h3></div></div>
+        <div class="edu-row"><div class="yr">Certificate</div><div><h3>User Experience — Accenture</h3></div></div>
+        <div class="edu-row"><div class="yr">2021 – 2023</div><div><h3>M.Sc. Mathematics with Computer Applications — Annai Women's College</h3></div></div>
+        <div class="edu-row"><div class="yr">2018 – 2021</div><div><h3>B.Sc. Mathematics with Computer Applications — Vellalar College for Women</h3></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact" id="contact">
+    <div class="wrap">
+      <div class="running-head" style="color:#6B4D1B">Contact</div>
+      <div class="contact-grid">
+        <div>
+          <h2>Let's build something that gets noticed.</h2>
+          <p>Working on a brand that needs content, campaigns and a strategy that actually connects? I'd love to hear about it.</p>
+        </div>
+        <div class="contact-list">
+          <a href="mailto:lavanyamariyappan3@gmail.com"><span class="lbl">Email</span>lavanyamariyappan3@gmail.com</a>
+          <a href="tel:+919360363499"><span class="lbl">Phone</span>+91 93603 63499</a>
+          <a href="https://linkedin.com/in/m-lavanya-30186520" target="_blank"><span class="lbl">LinkedIn</span>linkedin.com/in/m-lavanya-30186520</a>
+          <a href="https://www.behance.net/gallery/241072997/Lifestyle-Shopping" target="_blank"><span class="lbl">Portfolio (Behance)</span>UI/UX work — "Drops" app</a>
+          <a href="resume.pdf" target="_blank"><span class="lbl">Resume</span>Download PDF ↓</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap footer-inner">
+    <div>© 2026 Lavanya Mariyappan — Digital Marketing Executive</div>
+    <a href="#top">Back to top ↑</a>
+  </div>
+</footer>
+
+<script>
+document.getElementById('menuBtn').addEventListener('click',()=>{
+  document.getElementById('navLinks').classList.toggle('show');
+});
+document.querySelectorAll('.nav-links a').forEach(a=>a.addEventListener('click',()=>{
+  document.getElementById('navLinks').classList.remove('show');
+}));
+
+const filterBtns = document.querySelectorAll('.filter-btn');
+const projs = document.querySelectorAll('.proj');
+filterBtns.forEach(btn=>{
+  btn.addEventListener('click',()=>{
+    filterBtns.forEach(b=>b.classList.remove('active'));
+    btn.classList.add('active');
+    const f = btn.dataset.f;
+    projs.forEach(p=>{
+      p.style.display = (f==='all' || p.dataset.c.includes(f)) ? 'block' : 'none';
+    });
+  });
+});
+
+const caseTabs = document.querySelectorAll('.case-tab');
+const casePanels = document.querySelectorAll('.case-panel');
+caseTabs.forEach(tab=>{
+  tab.addEventListener('click',()=>{
+    caseTabs.forEach(t=>t.classList.remove('active'));
+    casePanels.forEach(p=>p.classList.remove('active'));
+    tab.classList.add('active');
+    document.getElementById(tab.dataset.t).classList.add('active');
+  });
+});
+</script>
+
+</body>
+</html>
